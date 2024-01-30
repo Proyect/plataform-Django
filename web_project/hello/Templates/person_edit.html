@@ -1,0 +1,12 @@
+{% extends ".html" %} 
+
+{% block content %}
+
+<h1> Editar Persona </h1>
+<form action="{% url 'person_edit' person.pk %}" method ='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="sumit"></button>
+</form>   
+{% endblock content %}
+
